@@ -1,64 +1,111 @@
 /******************************************************************************
-*                                Layout Design                                *
+*                           Base Layout and Style                             *
 ******************************************************************************/
 
-body {
-    margin: 0;
+a {
+    color: black;
+    text-decoration: none;
 }
 
-.top-bar {
+#app-button {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.top-left {
-    text-align: right;
-    position: absolute;
-    height: 16px;
-    width: 99px;
-    margin-top: 7px;
-    margin-left: 10px;
-}
-
-#store {
-    padding-left: 15px;
-}
-
-.top-right {
+    justify-content: center;
+    align-items: center;
     height: 30px;
-    line-height: 24px;
-    opacity: 0.87;
-    padding: 0px 30px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#link-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 30px;
-    height: 30px;
     
     background-image: url("https://ssl.gstatic.com/gb/images/i1_1967ca6a.png");
     background-position: -132px -38px;
     opacity: 0.65;
 }
 
-#sign-in {
-    margin-left: 15px;
-    width: 71px;
-    line-height: 30px;
-    border: 0;
-    background-color: #3476e8;
-    border-radius: 1.5px;
-    padding: 0;
+body {
+    margin: 0;
+}
+
+.bottom-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+
+    background-color: rgb(242, 242, 242);
+    border-top: 1px solid rgb(228, 228, 228);
+    font-family: arial;
+    font-size: 13px;
+    opacity: 1;
+}
+
+/* Ugly hard-coded fix to shift up the country name by 1px */
+#bottom-country {
+    height: 41px;
+}
+
+#bottom-left {
+    padding-left: 30px;
+}
+
+#bottom-left a {
+    margin: 0 23px 0 0;
+
+    color: #5f6368;
+}
+
+#bottom-right {
+    padding-left: 25px;
+    padding-right: 30px;
+}
+
+#bottom-right a {
+    margin: 0 0 0 23px;
+
+    color: #5f6368;
+}
+
+#foot-country {
+    padding-left: 30px;
+
+    font-size: 15px;
+    opacity: 0.55;
+}
+
+footer {
+    bottom: 0%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#google-search {
+    width: 129px;
 }
 
 #images {
     margin: 0px 15px 0px;
+}
+
+#language {
+    margin-top: 18px;
+
+    font-family: arial;
+    font-size: 13px;
+}
+
+#language a {
+    padding: 0 3px;
+
+    color: rgb(26, 13, 171);
+}
+
+#lucky {
+    width: 143px;
+}
+
+.magnifying-glass { 
+    fill: rgb(154, 160, 166);
+    fill-rule: evenodd;
 }
 
 .main-content {
@@ -66,6 +113,18 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 152px;
+}
+
+#sign-in {
+    width: 71px;
+    line-height: 30px;
+    margin-left: 15px;
+    padding: 0;
+
+    background-color: #3476e8;
+    border: 0;
+    border-radius: 1.5px;
 }
 
 #search-div {
@@ -73,6 +132,11 @@ body {
     align-items: center;
     margin-top: 20px;
     padding-right: 5px;
+    height: 44px;
+    width: 577px;
+    
+    border: 1px solid rgb(223, 225, 229);
+    border-radius: 24px;
 }
 
 .search-icon {
@@ -84,204 +148,127 @@ body {
 }
 
 #search-bar {
-    border: 0;
     flex-grow: 1;
     height: 34px;
 
+    border: 0;
     font-family: arial;
     font-size: 16px;
 }
 
 #search-buttons {
-    margin-top: 19px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 19px;
     padding-right: 13px;
 }
 
-#google-search {
-    margin: 11px 6px;
-    color: rgb(95, 99, 104);
-    font-weight: 400;
-    width: 129px;
+#search-buttons button {
     height: 36px;
-    line-height: 30px;
-    border: 0;
+    margin: 11px 6px;
+    padding: 0 16px 0;
+
     background-color: rgb(242, 242, 242);
-    font-family: Arial;
-    font-size: 14px;
-    border-radius: 4px;
-    padding: 0 16px 0;
-}
-
-#lucky {
-    margin: 11px 6px;
-    color: rgb(95, 99, 104);
-    font-weight: 400;
-    width: 143px;
-    height: 36px;
-    line-height: 30px;
     border: 0;
-    background-color:rgb(242, 242, 242);;
+    border-radius: 4px;
+    color: rgb(95, 99, 104);
     font-family: Arial;
     font-size: 14px;
-    border-radius: 4px;
-    padding: 0 16px 0;
-}
+    font-weight: 400;
+} 
 
-#language {
-    margin-top: 18px;
-    font-family: arial;
-    font-size: 13px;
-}
-
-.bottom-bar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 40px;
-    background-color: rgb(242, 242, 242);;
-}
-
-footer {
-    bottom: 0%;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-/******************************************************************************
-*                                Styling Design                               *
-******************************************************************************/
-
-.top-bar {
-    margin-top: 16px;
+#sign-in a {
+    color: white;
     font-family: Arial;
     font-size: 13px;
+    font-weight: 700;
 }
 
-a {
-    color: black;
-    text-decoration: none;
-}
-
-#lang {
-    color: rgb(26, 13, 171);
-    text-decoration: none;
-    padding: 0 3px;
-}
-
-#language {
-    font-family: arial;
-    font-size: 13px;
-}
-
-a:hover, #lang:hover {
-    text-decoration: underline;
-}
-
-.top-left {
-    opacity: 0.75;
-}
-
-#link-container:hover {
-    opacity: 0.95;
-}
-
-#sign-in:hover {
-    box-shadow: 0 1px 0 rgba(0,0,0,.15);
-}
-
-#sign-in:active {
-    box-shadow: inset 0 2px 0 rgba(0,0,0,.15);
-    background-color: #1562e6;
-}
-
-.main-content {
-    margin-top: 152px;
-}
-
-#search-div {
-    width: 577px;
-    height: 44px;
-    border: 1px solid rgb(223, 225, 229);
-    border-radius: 24px;
-}
-
-#search-div:hover {
-    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28) !important;
-    border-color: rgba(223,225,229,0) !important;
+#store {
+    padding-left: 15px;
 }
 
 svg {
     height: 20px;
     width: 20px;
 }
-.path-name {
-    
-    fill: rgb(154, 160, 166);
-    fill-rule: evenodd;
-}
 
-#foot-country {
-    font-family: arial;
-    font-size: 15px;
-    padding-left: 30px;
-    opacity: 0.55;
-}
+.top-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 16px;
 
-.bottom-bar {
-    border-top: 1px solid rgb(228, 228, 228);;
-}
-
-#bottom-left {
-    padding-left: 30px;
-    font-family: arial;
+    font-family: Arial;
     font-size: 13px;
-    opacity: 1;
 }
 
-#bottom-right {
-    padding-right: 30px;
-    font-family: arial;
-    font-size: 13px;
-    padding-left: 25px;
-    opacity: 1;
+.top-left {
+    position: absolute;
+    height: 16px;
+    width: 99px;
+    text-align: right;
+    margin-top: 7px;
+    margin-left: 10px;
+
+    opacity: 0.75;
 }
 
-#bottom-right a {
-    color: #5f6368;
-    margin: 0 0 0 23px;
+.top-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    line-height: 24px;
+    padding: 0px 30px 0px;
+
+    opacity: 0.87;
 }
 
-#bottom-left a {
-    color: #5f6368;
-    margin: 0 23px 0 0;
+/******************************************************************************
+*                   Hover, Focus and Active Behaviors                         *
+******************************************************************************/
+
+a:hover, #lang:hover {
+    text-decoration: underline;
+}
+
+#link-container:hover {
+    opacity: 0.95;
 }
 
 #search-buttons .search-button:hover {
-    cursor: pointer;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
     background-color: #f8f8f8;
     border: 1px solid #c6c6c6;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
     color: #222;
+    cursor: pointer;
 }
 
 #search-buttons .search-button:focus {
     border: 1px solid #4d90fe;
 }
 
-#sign-in a {
-    color: white;
-    font-weight: 700;
-    font-family: Arial;
-    font-size: 13px;
+/* *
+ * Important is used to reset Javascript otherwise
+ * it works only once before being overwritten.
+ */
+#search-div:hover {
+    border-color: rgba(223,225,229,0) !important;
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28) !important;
 }
 
 #sign-in a:hover {
     cursor: default;
     text-decoration: none;
+}
+
+#sign-in:active {
+    background-color: #1562e6 !important;
+    box-shadow: inset 0 2px 0 rgba(0,0,0,.15) !important; 
+}
+
+#sign-in:hover {
+    box-shadow: 0 1px 0 rgba(0,0,0,.15);
 }
