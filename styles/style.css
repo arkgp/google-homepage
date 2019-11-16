@@ -238,7 +238,7 @@ a:hover, #lang:hover {
     text-decoration: underline;
 }
 
-#link-container:hover {
+#app-button:hover {
     opacity: 0.95;
 }
 
